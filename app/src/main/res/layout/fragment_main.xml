@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MainFragment"
+    android:id="@+id/fragment_main">
+
+    <TextView
+        android:id="@+id/text_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/text_question"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/text_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_category" />
+
+    <TextView
+        android:id="@+id/text_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/answer"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/button_show_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_question"
+        />
+
+
+    <Button
+        android:id="@+id/button_show_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_answer"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/button_set_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/button_set_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_question"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_answer"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

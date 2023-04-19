@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyApplicationWithAuthorization</string>
+    <string name="answer">%s</string>
+    <string name="question">%s</string>
+    <string name="category">%s</string>
+    <string name="new_question">New question</string>
+    <string name="show_answer">Show the answer</string>
+
+
+</resources>
