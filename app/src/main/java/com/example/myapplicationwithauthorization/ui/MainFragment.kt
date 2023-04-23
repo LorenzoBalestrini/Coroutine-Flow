@@ -52,13 +52,13 @@ class MainFragment : Fragment() {
 lifecycleScope.launch {
     viewModel.result.collect {
         when(it) {
-            is MainViewModel.TriviaViewModelEvent.TriviaResult -> setQuestion(it.question)
-            is MainViewModel.TriviaViewModelEvent.TriviaError -> Snackbar.make(
+            is MainViewModel.TriviaViewModelState.TriviaResult -> setQuestion(it.question)
+            is MainViewModel.TriviaViewModelState.TriviaError -> Snackbar.make(
                 binding.fragmentMain,
                 "$it",
                 Snackbar.LENGTH_INDEFINITE)
                 .setAction("Retry") { observeDetails() }.show()
-            is MainViewModel.TriviaViewModelEvent.LastQuestion -> Toast.makeText(
+            is MainViewModel.TriviaViewModelState.LastQuestion -> Toast.makeText(
                 requireContext(),
                 "First time opening the app?",
                 Toast.LENGTH_LONG
